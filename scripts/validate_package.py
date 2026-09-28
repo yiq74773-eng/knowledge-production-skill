@@ -1,5 +1,6 @@
 """Validate portable authored references, source syntax and package content without extra packages."""
 import ast
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -39,6 +40,12 @@ def validate():
     for name in required:
         if not (SKILL / name).is_file():
             issues.append("Missing bundled requirement: " + name)
+    manifest = SKILL / "vendor-manifest.json"
+    if manifest.is_file():
+        for name, expected in json.loads(manifest.read_text(encoding="utf-8"))["sha256"].items():
+            path = SKILL / name
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+                issues.append("Bundled source checksum mismatch: " + name)
     return issues
 
 
