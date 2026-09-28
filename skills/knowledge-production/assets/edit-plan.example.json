@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "name": "knowledge-work-v1",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "clips": [
+    {"kind": "video", "media": "assets/example.mp4", "start": 0, "source_start": 1, "duration": 4, "volume": 0},
+    {"kind": "narration", "media": "assets/narration.wav", "start": 0, "source_start": 0, "duration": 4, "volume": 1},
+    {"kind": "bgm", "media": "assets/music.wav", "start": 0, "source_start": 0, "duration": 4, "volume": 0.06}
+  ],
+  "captions": [{"text": "替换成实际录音对应的字幕", "start": 0.2, "duration": 3.5}]
+}

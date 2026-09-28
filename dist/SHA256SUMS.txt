@@ -1,0 +1,2 @@
+25b070164e1a664935ef3615d2a75fd7a1afe6b3e50e85eb2e8739bfc3587c64  knowledge-production.zip
+428d3e1fc433b2ed0a512fec804659ba7af9e0622f9168afe969d6fb03adb52b  knowledge-production-prompt.md
